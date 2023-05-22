@@ -1,2 +1,16 @@
-<h1>The answer is:</h1>
-<p><%=@answer%></p>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-4">
+      <h1>Stupid coaching</h1>
+      <div class="alert alert-secondary" role="alert">
+        <p>"<%= params[:question] %>"</p>
+        <p><em>-You</em></p>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        <p>"<strong><%=@answer%></strong>"</p>
+        <p><em>-Your coach</em></p>
+      </div>
+      <%= link_to "Ask another question", coach_path, :class => "btn btn-primary" %>
+    </div>
+  </div>
+</div>
